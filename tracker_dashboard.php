@@ -82,7 +82,6 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $totals['carbs'] += $row['carbs'];
 }
 
-// CALCS
 $bmr = $_SESSION['bmr'] * $_SESSION['bmrAdjustment'];
 
 if ($bmr > 0) {
@@ -96,6 +95,11 @@ if ($bmr > 0) {
 $proteinPercent = ($_SESSION['proteinGoal'] > 0) ? min(100, ($totals['protein']/$_SESSION['proteinGoal'])*100) : 0;
 $fatPercent = ($_SESSION['fatGoal'] > 0) ? min(100, ($totals['fat']/$_SESSION['fatGoal'])*100) : 0;
 $carbPercent = ($_SESSION['carbGoal'] > 0) ? min(100, ($totals['carbs']/$_SESSION['carbGoal'])*100) : 0;
+
+$proteinRemaining = max(0, $_SESSION['proteinGoal'] - $totals['protein']);
+$fatRemaining = max(0, $_SESSION['fatGoal'] - $totals['fat']);
+$carbRemaining = max(0, $_SESSION['carbGoal'] - $totals['carbs']);
+
 
 
 $today = date('Y-m-d');
