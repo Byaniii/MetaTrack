@@ -1,7 +1,11 @@
+
 <?php
 session_start();
 date_default_timezone_set('Asia/Manila');
+?>
 
+<?php
+include 'includes/header.php';
 try {
     $db = new PDO('mysql:host=localhost;dbname=calorie_tracker;charset=utf8', 'root', '');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -80,11 +84,19 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
 // CALCS
 $bmr = $_SESSION['bmr'] * $_SESSION['bmrAdjustment'];
-$percent = min(100, ($totals['calories']/$bmr)*100);
-$remaining = intval($bmr - $totals['calories']);
-$proteinPercent = min(100, ($totals['protein']/$_SESSION['proteinGoal'])*100);
-$fatPercent = min(100, ($totals['fat']/$_SESSION['fatGoal'])*100);
-$carbPercent = min(100, ($totals['carbs']/$_SESSION['carbGoal'])*100);
+
+if ($bmr > 0) {
+    $percent = min(100, ($totals['calories']/$bmr)*100);
+    $remaining = intval($bmr - $totals['calories']);
+} else {
+    $percent = 0;
+    $remaining = 0;
+}
+
+$proteinPercent = ($_SESSION['proteinGoal'] > 0) ? min(100, ($totals['protein']/$_SESSION['proteinGoal'])*100) : 0;
+$fatPercent = ($_SESSION['fatGoal'] > 0) ? min(100, ($totals['fat']/$_SESSION['fatGoal'])*100) : 0;
+$carbPercent = ($_SESSION['carbGoal'] > 0) ? min(100, ($totals['carbs']/$_SESSION['carbGoal'])*100) : 0;
+
 
 $today = date('Y-m-d');
 $yesterday = date('Y-m-d', strtotime('-1 day'));
@@ -100,7 +112,7 @@ $proteinGoalMet = $totals['protein'] >= $_SESSION['proteinGoal'] ? '✅ Met' : '
 
 <button onclick="openDrawer()" class="input-form-button">Add Food</button>
 <button onclick="openIntakeDrawer()" class="input-form-button" style="position:fixed;bottom:20px;left:20px;">View Intake</button>
-<a href="index.php" class="input-form-button" style="display:inline-block;margin-left:10px;">Home</a>
+<a href="index.php" class="input-form-button" style="display:inline-block;margin-left:10px;">Log-Out</a>
 
 <div class="forms-section">
     <h2>Calculate BMR</h2>
@@ -114,7 +126,7 @@ $proteinGoalMet = $totals['protein'] >= $_SESSION['proteinGoal'] ? '✅ Met' : '
         </select>
         <button type="submit">Calculate</button>
     </form>
-    <div><strong>Your BMR:</strong> <?= intval($bmr) ?> kcal/day</div>
+    <div><strong>Your BMR:</strong> <?= intval($bmr) ?> kcal/day </div>
 
     <h2>Set Macro Goals</h2>
     <form method="post" class="macro-goals-form">
