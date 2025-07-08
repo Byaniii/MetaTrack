@@ -1,35 +1,50 @@
-MetaTrack is a user-friendly web application built with PHP, HTML, CSS, and MySQL that helps users track their daily calorie intake, monitor nutritional goals, and visualize their health progress over time.
+# 📊 MetaTrack – Calorie & Nutrition Tracking Web App
 
-🚀 Features
-✨ Modern landing page with animated transitions
+**MetaTrack** is a modern, responsive web application designed to help users track their calorie intake, log meals, monitor progress, and set personal health goals. Built with PHP and MySQL, it features a sleek user interface with animated components for an engaging user experience.
 
-👤 User registration & login system with password validation
+---
 
-🍽️ Meal and calorie tracking (dashboard coming soon)
+## 🚀 Features
 
-📈 Visual progress insights & goal setting
+- ✨ Interactive landing page with animations and feature highlights
+- 👤 User registration and login system with server-side validation
+- 🔒 Secure password hashing and strength enforcement (via regex)
+- 📅 Birthdate and gender input during registration for personalization
+- 📈 Feature sections for goal setting, meal logging, calorie tracking, and progress visualization
+- 📣 Testimonials and FAQ section with dropdown interactions
+- 💬 Fully responsive layout for multiple screen sizes
+- 🎨 Clean and consistent UI design matching modern web standards
 
-🙋‍♂️ Responsive FAQ and testimonial sections
+---
 
-💡 Built with a clean, consistent UI for desktop and smaller screens
+## 🧱 File Structure
+metatrack/
+├─ assets/
+│ └─ images/
+│ ├─ logo.png
+│ └─ slides/
+│ ├─ calorie_monitoring.png
+│ ├─ goal_setting.png
+│ ├─ meal_logging.png
+│ └─ progress_tracking.jpg
+├─ css/
+│ └─ styles.css
+├─ js/
+│ └─ scripts.js
+├─ includes/
+│ ├─ db.php
+│ ├─ header.php
+│ └─ footer.php
+├─ register.php
+├─ login.php
+├─ dashboard.php
+├─ index.php
+└─ README.md
 
-🔐 Passwords securely hashed & validated with regex rules (uppercase, number, 8+ characters)
+---
 
-📁 Tech Stack
-Frontend: HTML, CSS (custom styles, no frameworks), vanilla JavaScript
+## 💻 Tech Stack
 
-Backend: PHP (with POST/GET handling and prepared statements)
-
-Database: MySQL (via phpMyAdmin)
-
-🧱 File Structure
-<pre><code>``` metatrack/ │ ├── assets/ │ └── images/ │ ├── logo.png │ └── slides/ │ ├── calorie_monitoring.png │ ├── goal_setting.png │ ├── meal_logging.png │ └── progress_tracking.jpg │ ├── css/ │ └── styles.css │ ├── js/ │ └── scripts.js │ ├── includes/ │ ├── db.php │ ├── header.php │ └── footer.php │ ├── register.php ├── login.php ├── dashboard.php ├── index.php └── README.md ```</code></pre>
-
-🔧 Setup Instructions
-Clone the repository
-
-Import the provided SQL file in phpMyAdmin
-
-Update DB connection in includes/db.php
-
-Run locally on XAMPP or similar PHP server
+- **Frontend:** HTML, CSS, JavaScript (Vanilla)
+- **Backend:** PHP (with prepared statements and session handling)
+- **Database:** MySQL (managed via phpMyAdmin)
