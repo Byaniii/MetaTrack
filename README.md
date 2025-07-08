@@ -1,5 +1,3 @@
-#MetaTrack – Calorie & Nutrition Tracking Web App
-
 MetaTrack is a user-friendly web application built with PHP, HTML, CSS, and MySQL that helps users track their daily calorie intake, monitor nutritional goals, and visualize their health progress over time.
 
 🚀 Features
@@ -25,33 +23,7 @@ Backend: PHP (with POST/GET handling and prepared statements)
 Database: MySQL (via phpMyAdmin)
 
 🧱 File Structure
-metatrack/
-│
-├── assets/
-│   └── images/
-│       ├── logo.png
-│       └── slides/
-│           ├── calorie_monitoring.png
-│           ├── goal_setting.png
-│           ├── meal_logging.png
-│           └── progress_tracking.jpg
-│
-├── css/
-│   └── styles.css
-│
-├── js/
-│   └── scripts.js
-│
-├── includes/
-│   ├── db.php
-│   ├── header.php
-│   └── footer.php
-│
-├── register.php
-├── login.php
-├── dashboard.php
-├── index.php
-└── README.md
+<pre><code>``` metatrack/ │ ├── assets/ │ └── images/ │ ├── logo.png │ └── slides/ │ ├── calorie_monitoring.png │ ├── goal_setting.png │ ├── meal_logging.png │ └── progress_tracking.jpg │ ├── css/ │ └── styles.css │ ├── js/ │ └── scripts.js │ ├── includes/ │ ├── db.php │ ├── header.php │ └── footer.php │ ├── register.php ├── login.php ├── dashboard.php ├── index.php └── README.md ```</code></pre>
 
 🔧 Setup Instructions
 Clone the repository
