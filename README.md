@@ -17,32 +17,6 @@
 
 ---
 
-## 🧱 File Structure
-metatrack/
-├─ assets/
-│ └─ images/
-│ ├─ logo.png
-│ └─ slides/
-│ ├─ calorie_monitoring.png
-│ ├─ goal_setting.png
-│ ├─ meal_logging.png
-│ └─ progress_tracking.jpg
-├─ css/
-│ └─ styles.css
-├─ js/
-│ └─ scripts.js
-├─ includes/
-│ ├─ db.php
-│ ├─ header.php
-│ └─ footer.php
-├─ register.php
-├─ login.php
-├─ dashboard.php
-├─ index.php
-└─ README.md
-
----
-
 ## 💻 Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript (Vanilla)
