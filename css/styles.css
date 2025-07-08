@@ -163,6 +163,42 @@ nav {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.success-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+}
+
+.success-page .site-footer {
+    width: 100%;
+}
+
+.success-message a.cta-button-alt {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+    font-size: 18px;
+}
+
+.success-message a.cta-button-alt:hover {
+    background: #218838;
+}
+
+
+.cta-button-alt:hover {
+    background: #218838;
+}
+
+
 .cta-button:hover {
   background-color: #2ecc71;
   transform: scale(1.05);
