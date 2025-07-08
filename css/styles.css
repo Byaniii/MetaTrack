@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-  background: #2c3e50;
+  background-color: #eafaf2;
   height: 70px;
   padding: 0 30px;
   display: flex;
@@ -62,7 +62,7 @@ nav {
 
 .features-section {
   padding: 60px 20px;
-  background-color: #f8fafa;
+  background-color: #f9fafb;
   text-align: center;
 }
 
@@ -168,11 +168,85 @@ nav {
   transform: scale(1.05);
 }
 
-footer {
+.site-footer {
+  background-color: #eafaf2;
+  padding: 60px 30px 30px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-brand img {
+  width: 100px;
+  margin-bottom: 8px;
+  display: block;      
+}
+
+.footer-brand p {
+  .footer-brand p {
+  font-size: 15px;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+}
+
+.footer-links,
+.footer-contact {
+  min-width: 180px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 10px;
+  color: #27ae60;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #27ae60;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+  color: #555;
+}
+
+.footer-bottom {
   text-align: center;
-  margin-top: 60px;
-  padding: 20px;
-  background-color: #eee;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #777;
 }
 
 .animate {
@@ -200,6 +274,13 @@ footer {
 .how-it-works {
   text-align: center;
   padding: 60px 20px;
+  background-color: #f3fdf7;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #2c3e50;
 }
 
 .how-steps {
@@ -207,7 +288,20 @@ footer {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  margin-top: 40px;
+}
+
+.step-card {
+  background-color: #f8fdfb;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
 }
 
 .step {
@@ -216,16 +310,31 @@ footer {
   text-align: center;
 }
 
-.step img {
-  width: 80px;
-  margin-bottom: 15px;
+.step-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.step-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #27ae60;
+}
+
+.step-card p {
+  font-size: 16px;
+  color: #555;
 }
 
 .cta-section {
-  background-color: #f4f7f9;
+  background-color: #d7f5e8;
   padding: 80px 20px;
   display: flex;
   justify-content: center;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+  background-color: transparent;
 }
 
 .cta-card {
@@ -356,6 +465,12 @@ footer {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  padding: 80px 20px 60px;
+  background-color: #f7f9fa;
+  padding-top: 80px;
+  margin-top: 60px;
+  padding-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .faq-section h2 {
@@ -371,7 +486,7 @@ footer {
 .faq-item {
   margin-bottom: 25px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: #f9f9f9;
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
   overflow: hidden;
   transition: all 0.3s ease;

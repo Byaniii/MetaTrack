@@ -12,31 +12,29 @@
             <p>Take control of your health with our all-in-one calorie and nutrition tracker designed to simplify your journey.</p>
         </div>
 
-        <section class="how-it-works animate">
-        <h2>How It Works</h2>
+        <section class="how-it-works scroll-animate">
+        <h2 class="section-title">How MetaTrack Works</h2>
 
         <div class="how-steps">
-
-            <div class="step">
+            <div class="step-card">
                 <img src="assets/images/icons/signup.png" alt="Sign Up">
                 <h3>1. Sign Up</h3>
-                <p>Create your account and personalize your goals.</p>
+                <p>Create your account and personalize your goals to begin tracking.</p>
             </div>
 
-            <div class="step">
+            <div class="step-card">
                 <img src="assets/images/icons/logmeal.png" alt="Log Meals">
                 <h3>2. Log Meals</h3>
-                <p>Quickly log food, beverages, and snacks anytime.</p>
+                <p>Track your food intake anytime and get insights instantly.</p>
             </div>
 
-            <div class="step">
+            <div class="step-card">
                 <img src="assets/images/icons/trackprogress.png" alt="Track Progress">
                 <h3>3. Track Progress</h3>
-                <p>View daily, weekly, and monthly insights to stay on track.</p>
+                <p>Visualize your progress and stay motivated every step of the way.</p>
             </div>
 
         </div>
-
         </section>
 
         <div class="features-grid">
@@ -111,7 +109,7 @@
                 </button>
 
                 <div class="faq-answer">
-                    <p>MetaTrack is a calorie and nutrition tracking platform that helps you log meals, monitor intake, set goals, and track progress—all from one simple dashboard.</p>
+                    <p>MetaTrack is a calorie and nutrition tracking platform that helps you log meals, monitor intake, set goals, and track progress, all from one simple dashboard.</p>
                 </div>
 
             </div>
